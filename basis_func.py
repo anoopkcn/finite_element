@@ -22,7 +22,7 @@ def tri_p1(x,y,eval_p):
 
     """
     n=len(eval_p)
-    a=np.zeros(3);b=np.zeros(3);c=np.zeros(3),np.zeros(n)
+    a=np.zeros(3);b=np.zeros(3);c=np.zeros(3);phi=np.zeros((n,3))
     M=np.array([[x[0],y[0],1],[x[1],y[1],1],[x[2],y[2],1]])
     eig_val=np.array([[1,0,0],[0,1,0],[0,0,1]])
 
@@ -32,7 +32,9 @@ def tri_p1(x,y,eval_p):
 
     for i in  range(0,n):
         for j in range(0,3):
-            phi[j]=a[j]*eval_p[i][0]+b[j]*eval_p[i][1]+c[j]
+            phi[i][j]=a[j]*eval_p[i][0]+b[j]*eval_p[i][1]+c[j]
 
-    return 0
-    # return dx_phi,dy_phi,phi[0],surf_e
+    dx_phi=a; dy_phi=b
+    surf_e = 1./2. * abs(x[0]*y[2]-x[0]*y[1]+x[1]*y[0]-x[1]*y[2]+x[2]*y[1]-x[2]*y[0] )
+
+    return dx_phi,dy_phi,phi[0],surf_e
