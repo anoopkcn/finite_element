@@ -59,8 +59,12 @@ def f_v(topo,x,y):
     for element in topo:
         x_l = x[element]
         y_l = y[element]
-        (dx_phi,dy_phi,phi,surf_e) = tri_p1(x_l,y_l,np.zeros((1,2)))
 
-    F=surf_e/3.*np.ones((x.shape[0]))
+        surf_e = 1./2. *\
+        abs(x_l[0]*y_l[2]-x_l[0]*y_l[1]+x_l[1]*y_l[0]-\
+        x_l[1]*y_l[2]+x_l[2]*y_l[1]-x_l[2]*y_l[0] )
+        l_F = surf_e/3. * force(x_l,y_l)
+        for i in range (0,3):
+            F[element[i]] += l_F[i]
 
     return F

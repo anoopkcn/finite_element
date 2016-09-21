@@ -37,4 +37,8 @@ if __name__ == "__main__":
     F[b_nodes]=0
     A_clear = clear_rows(A,b_nodes)
     sol = np.linalg.solve(A_clear,F)
-    plot_sol_p1(x,y,sol,topo)
+    #plot_sol_p1(x,y,sol,topo)
+    actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
+    diff = 2*sol - actual_sol
+    plot_sol_p1(x,y,diff,topo)
+
