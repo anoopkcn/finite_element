@@ -2,11 +2,7 @@ from __future__ import division
 import unittest
 from mesh import *
 from basis_func import *
-<<<<<<< HEAD
 #from assemble import *
-=======
-# from assemble import *
->>>>>>> eef4759785f2c5a001f760aa8aafcd865415a07b
 import numpy as np
 
 def almost_equal(a, b, digits):
@@ -35,7 +31,7 @@ class BasisFuncsTest(unittest.TestCase):
     def test_basis_func_00(self):
         x = np.array([0.,1.,0.])
         y = np.array([0.,0.,1.])
-        dx_phi,dy_phi,phi,surf_e = tri_p1(x,y,np.array([.1,.2]))
+        dx_phi,dy_phi,phi,surf_e = tri_p1(x,y,np.array([[.1,.2]]))
         self.assertTrue(almost_equal(surf_e,.5,1))
         self.assertTrue(lists_almost_equal(dx_phi, [-1., 1., 0.],1))
         self.assertTrue(lists_almost_equal(dy_phi, [-1., 0., 1.],1))
@@ -43,7 +39,7 @@ class BasisFuncsTest(unittest.TestCase):
     def test_basis_func_01(self):
         x = np.array([1.,1.,0.])
         y = np.array([0.,1.,1.])
-        dx_phi,dy_phi,phi,surf_e = tri_p1(x,y,np.array([.9,.8]))
+        dx_phi,dy_phi,phi,surf_e = tri_p1(x,y,np.array([[.9,.8]]))
         self.assertTrue(almost_equal(surf_e,.5,1))
         self.assertTrue(lists_almost_equal(dx_phi, [0.,1.,-1.],1))
         self.assertTrue(lists_almost_equal(dy_phi, [-1.,1.,0.],1))
@@ -75,8 +71,6 @@ class AssembleTest(unittest.TestCase):
         self.assertTrue(truth)
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
-"""
-
 """
 if __name__ == "__main__":
     unittest.main()
