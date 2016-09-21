@@ -42,6 +42,11 @@ def gradu_gradv(topo,x,y):
 
     return global_matrix
 
+def force(x,y):
+    f = (np.pi)**2 * np.sin(np.pi * x) * np.sin(np.pi * y)
+    #f = np.ones(len(x))    
+    return f
+
 def f_v(topo,x,y):
     """ F assembly code
     Input :
@@ -56,11 +61,15 @@ def f_v(topo,x,y):
 
     Notice :
     """
+    F = np.zeros(len(x))
     for element in topo:
         x_l = x[element]
         y_l = y[element]
-        (dx_phi,dy_phi,phi,surf_e) = tri_p1(x_l,y_l,np.zeros((1,2)))
-
-        F=surf_e/3.*np.ones((x.shape[0]))
+        surf_e = 1./2. *\
+        abs(x_l[0]*y_l[2]-x_l[0]*y_l[1]+x_l[1]*y_l[0]-\
+        x_l[1]*y_l[2]+x_l[2]*y_l[1]-x_l[2]*y_l[0] )
+        l_F = surf_e/3. * force(x,y)
+        for i in range (0,3):
+            F[element[i]] += l_F[i]
 
     return F
