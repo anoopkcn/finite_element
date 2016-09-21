@@ -2,6 +2,7 @@ from __future__ import division
 import unittest
 from mesh import *
 from basis_func import *
+#from assemble import *
 import numpy as np
 
 def almost_equal(a, b, digits):
@@ -71,7 +72,5 @@ class AssembleTest(unittest.TestCase):
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
 """
-
 if __name__ == "__main__":
     unittest.main()
-"""
