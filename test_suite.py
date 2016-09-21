@@ -72,6 +72,6 @@ class AssembleTest(unittest.TestCase):
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
 
+"""
 if __name__ == "__main__":
     unittest.main()
-"""
