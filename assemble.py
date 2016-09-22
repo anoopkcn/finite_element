@@ -61,6 +61,6 @@ def f_v(topo,x,y):
         y_l = y[element]
         (dx_phi,dy_phi,phi,surf_e) = tri_p1(x_l,y_l,np.zeros((1,2)))
 
-        F=surf_e/3.*np.ones((x.shape[0]))
+    F=surf_e/3.*np.ones((x.shape[0]))
 
     return F

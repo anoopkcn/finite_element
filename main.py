@@ -31,7 +31,7 @@ def clear_rows(A,b_nodes):
 if __name__ == "__main__":
 
     # topo , x , y , nodes , b_nodes = read_msh("mesh/square.msh")
-    topo , x , y , nodes , b_nodes = read_msh("mesh/disc_sh.msh")
+    topo , x , y , nodes , b_nodes = read_msh("mesh/square.msh")
     A = gradu_gradv(topo,x,y)
     F = f_v(topo,x,y)
     F[b_nodes]=0
