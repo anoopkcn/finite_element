@@ -31,5 +31,3 @@ this is a kidsjngfldfkg dlfkgld
   plt.savefig('python-matplot-fig.png')
   return 'python-matplot-fig.png' # return filename to org-mode
 #+end_src
-
-[[file:python-matplot-fig.png]]
