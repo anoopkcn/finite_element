@@ -54,6 +54,10 @@ class MeshTest(unittest.TestCase):
         self.assertItemsEqual(result, expected)
         self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
         # assertCountEqual for python 3
+<<<<<<< HEAD
+=======
+
+>>>>>>> 007917bbc2241d23b7cf361cfad6f76b36f3b67a
 class AssembleTest(unittest.TestCase):
     def test_assemble(self):
         #topo , x , y , nodes , b_nodes = read_msh('mesh/square.msh')
@@ -70,5 +74,9 @@ class AssembleTest(unittest.TestCase):
         self.assertTrue(truth)
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
+<<<<<<< HEAD
+=======
+
+>>>>>>> 007917bbc2241d23b7cf361cfad6f76b36f3b67a
 if __name__ == "__main__":
     unittest.main()

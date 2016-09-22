@@ -38,7 +38,7 @@ def gradu_gradv(topo,x,y):
         # add K_matrix to global_matrix
         for i in range(0,3):
             for j in range(0,3):
-                A[element[i], element[j]] += K_matrix[i,j]
+                global_matrix[element[i], element[j]] += K_matrix[i,j]
     
     return global_matrix
 
