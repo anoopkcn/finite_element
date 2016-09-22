@@ -2,7 +2,14 @@ from basis_func import *
 import numpy as np
 
 def gradu_gradv(topo,x,y):
-    """ A assembly code """
+    """ A assembly code
+    Input :
+
+    topo : Information about the topology of the triangles. \n
+    x    : An (n,3) array of n evaluation points with columns x1, x2, x3. \n
+    y    : An (n,3) array of n evaluation points with columns y1, y2, y3. \n
+
+    """
     return A
 
 def f_v(topo,x,y):
