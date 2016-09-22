@@ -18,19 +18,14 @@ def clear_rows(A,b_nodes):
     A : The matrix after applying the boundary conditions
 
     """
-    n=np.len(A)
-    for i in (0,n):
-        for j in (0,n):
-            for k in b_nodes:
-                if (i==k and i!=j):
-                    A[i][j]=0
-
+    n=len(A)
+    # for j in (0,n):
+    for i in b_nodes:
+        A[i][i+1:]=0
+        A[i][:i]=0
+    # plt.spy(A)
+    # plt.show()
     return A
-
-    # sould be cleard when running main.py
-    A_clear = clear_rows(A,b_nodes)
-    sol = np.linalg.solve(np.asmatrix(A_clear),np.asmatrix(F))
-
 
 
 if __name__ == "__main__":
@@ -40,5 +35,6 @@ if __name__ == "__main__":
     F = f_v(topo,x,y)
     F[b_nodes]=0
     A_clear = clear_rows(A,b_nodes)
-    sol = np.linalg.solve(np.asmatrix(A_clear),np.asmatrix(F))
+    # print A_clear.shape
+    sol = np.linalg.solve(A_clear,F)
     plot_sol_p1(x,y,sol,topo)
