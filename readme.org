@@ -9,7 +9,10 @@
 
    One of the relatively easy problems to sole with FEM is the *Poisson's problem, modeling the diffusion of temperature in a body*. Which can be stated as follows. Given a domain \Omega \subset R^{2}
 
--\Delta /u = f/   in \Omega \\
-/u = 0/    in \delta \Omega \\
+   -\Delta /u = f/   in \Omega \\
+   /u = 0/    in \delta \Omega \\
+
+   It can be proved that a solution is characterized by two continuous derivatives in other words /u = C^{2} / \\
+
 
 ** Theory
