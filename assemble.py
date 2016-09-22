@@ -42,6 +42,12 @@ def gradu_gradv(topo,x,y):
 
     return global_matrix
 
+
+def force(x,y):
+    f = 2*(np.pi)**2 * np.sin(np.pi * x) * np.sin(np.pi * y)
+    #f = np.ones(len(x))    
+    return f
+
 def f_v(topo,x,y):
     """ F assembly code
     Input :
