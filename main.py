@@ -36,6 +36,5 @@ if __name__ == "__main__":
     F = f_v(topo,x,y)
     F[b_nodes]=0
     A_clear = clear_rows(A,b_nodes)
-    # print A_clear.shape
     sol = np.linalg.solve(A_clear,F)
     plot_sol_p1(x,y,sol,topo)
