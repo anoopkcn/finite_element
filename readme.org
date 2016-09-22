@@ -12,6 +12,6 @@
    -\Delta /u = f/   in \Omega \\
    /u = 0/    in \delta \Omega
 
-   It can be proved that a solution, which is characterized by two continuous derivatives (in other words /u = C^{2}/) exists and its unique
+   It can be proved that a solution, which is characterized by two continuous derivatives (in other words /u = C^{2}/) exists and it is unique.
 
 ** Theory
