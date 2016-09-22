@@ -1,7 +1,7 @@
 * FINITE ELEMENTS
 ** Introduction
    The finite element method (FEM) is a numerical technique for finding approximate solutions to boundary value problems for partial differential equations. In other words it can be used to find solutions to problems that can be expressed into 'governing equations' and 'boundary conditions'.
-   #+attr_odt: :scale 0.7
+   #+attr_odt: :width 10
    #+html: <p align="center"><img src="images/fem.png" /></p>
    One of the relatively easy problems to sole with FEM is the Poisson's problem, modeling the diffusion of temperature in a body. Which can be stated as follows. Given a domain \Omega \subset R^{2}
 
