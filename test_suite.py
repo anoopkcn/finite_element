@@ -4,6 +4,7 @@ from mesh import *
 from basis_func import *
 from assemble import *
 import numpy as np
+# from main import *
 
 def almost_equal(a, b, digits):
     if (abs(a)<10**-10 and abs(b)<10**-10):
@@ -71,6 +72,20 @@ class AssembleTest(unittest.TestCase):
         self.assertTrue(truth)
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
+"""
+class MainTest(unittest.TestCase):
+    def test_main(self):
+        topo , x , y , nodes , b_nodes = read_msh('mesh/square.msh')
+        for element in topo:
+
+            # let K denote the current element (a triangle, here)
+            # x_local, y_local store the coords of the vertices of K
+            x_K = x[element]
+            y_K = y[element]
+            dx_phi,dy_phi,phi,surf_e = tri_p1(x_K,y_K,np.array([[.1,.2]]))
+        A = gradu_gradv(topo,x,y)
+        F = f_v(topo,x,y)
+"""
 
 if __name__ == "__main__":
     unittest.main()

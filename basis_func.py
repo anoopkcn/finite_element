@@ -37,4 +37,4 @@ def tri_p1(x,y,eval_p):
     dx_phi=a; dy_phi=b
     surf_e = 1./2. * abs(x[0]*y[2]-x[0]*y[1]+x[1]*y[0]-x[1]*y[2]+x[2]*y[1]-x[2]*y[0] )
 
-    return dx_phi,dy_phi,phi[0],surf_e
+    return dx_phi,dy_phi,phi,surf_e
