@@ -1,5 +1,6 @@
 from basis_func import *
 import numpy as np
+from get_param import *
 
 def gradu_gradv(topo,x,y):
     """
@@ -50,7 +51,7 @@ def force(x,y):
     elif force == "one" :
         f = np.ones(len(x))
     else:
-        print(Invalid force name)
+        print("Invalid force name")
         f = 0
     return f
 

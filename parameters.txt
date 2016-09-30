@@ -1,7 +1,7 @@
 %%%%%%%% PARAMETERS %%%%%%%%%%
 
-force = sinsin
-mesh = HQsquare
+force = one
+mesh = square
 
 %%%%% AVAILABLE OPTIONS %%%%%%
 

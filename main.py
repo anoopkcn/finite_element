@@ -37,10 +37,10 @@ if __name__ == "__main__":
     sol = np.linalg.solve(A_clear,F)
     plot_sol_p1(x,y,sol,topo)
 
-	#Uncomment what follows to plot the difference between the difference between the
-	#approximation of actual solution, and the output of "finite elements"
-    
-    actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
-    diff = sol - actual_sol
-    plot_sol_p1(x,y,diff,topo)
+    plot_diff_bool = (mesh_name == "square" or mesh_name == "HQsquare")
+    plot_diff_bool &= (str(get_force()) == "sinsin")
+    if plot_diff_bool:
+        actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
+        diff = sol - actual_sol
+        plot_sol_p1(x,y,diff,topo)
 
