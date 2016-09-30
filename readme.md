@@ -4,6 +4,7 @@ The finite element method (FEM) is a numerical technique for finding approximate
 
 
 ![theory]([file:images/fem.png)
+Format: ![Alt Text](url)
 
 
 One of the relatively easy problems to sole with FEM is the *Poisson's problem, modeling the diffusion of temperature in a body*. Which can be stated as follows. Given a domain \Omega \subset R^{2}
