@@ -6,18 +6,20 @@ The finite element method (FEM) is a numerical technique for finding approximate
 ![theory](images/fem.png?raw=true)
 
 
-One of the relatively easy problems to sole with FEM is the *Poisson's problem, modeling the diffusion of temperature in a body*. Which can be stated as follows. Given a domain \Omega \subset R^{2}
-
-   -\Delta /u = f/   in \Omega \\
-   /u = 0/    in \delta \Omega
-
-It can be proved that a solution, which is characterized by two continuous derivatives (in other words /u = C^{2}/) exists and it is unique.
-
+One of the relatively easy problems to sole with FEM is the **Poisson's problem, modeling the diffusion of temperature in a body**. Which we are trying to solve using this code.
 
 ##Basic Algorithm
 
 
 
 ##Results
+
+Result 1
+![theory](images/solution_with_forcing.pngraw=true)
+
+
+Difference with the theoretical value
+![theory](images/difference_from_actual_solution.png?raw=true)
+
 
 
