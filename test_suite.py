@@ -36,7 +36,7 @@ class BasisFuncsTest(unittest.TestCase):
         self.assertTrue(almost_equal(surf_e,.5,1))
         self.assertTrue(lists_almost_equal(dx_phi, [-1., 1., 0.],1))
         self.assertTrue(lists_almost_equal(dy_phi, [-1., 0., 1.],1))
-        self.assertTrue(lists_almost_equal(phi,[0.7, 0.1, 0.2],1))
+        self.assertTrue(lists_almost_equal(phi[0],[0.7, 0.1, 0.2],1))
     def test_basis_func_01(self):
         x = np.array([1.,1.,0.])
         y = np.array([0.,1.,1.])
@@ -44,7 +44,7 @@ class BasisFuncsTest(unittest.TestCase):
         self.assertTrue(almost_equal(surf_e,.5,1))
         self.assertTrue(lists_almost_equal(dx_phi, [0.,1.,-1.],1))
         self.assertTrue(lists_almost_equal(dy_phi, [-1.,1.,0.],1))
-        self.assertTrue(lists_almost_equal(phi,[0.2 ,0.7, 0.1],1))
+        self.assertTrue(lists_almost_equal(phi[0],[0.2 ,0.7, 0.1],1))
 
 
 class MeshTest(unittest.TestCase):
@@ -72,20 +72,7 @@ class AssembleTest(unittest.TestCase):
         self.assertTrue(truth)
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
-"""
-class MainTest(unittest.TestCase):
-    def test_main(self):
-        topo , x , y , nodes , b_nodes = read_msh('mesh/square.msh')
-        for element in topo:
 
-            # let K denote the current element (a triangle, here)
-            # x_local, y_local store the coords of the vertices of K
-            x_K = x[element]
-            y_K = y[element]
-            dx_phi,dy_phi,phi,surf_e = tri_p1(x_K,y_K,np.array([[.1,.2]]))
-        A = gradu_gradv(topo,x,y)
-        F = f_v(topo,x,y)
-"""
 
 if __name__ == "__main__":
     unittest.main()
