@@ -4,7 +4,6 @@ from mesh import *
 from basis_func import *
 from assemble import *
 import numpy as np
-# from main import *
 
 def almost_equal(a, b, digits):
     if (abs(a)<10**-10 and abs(b)<10**-10):
@@ -72,7 +71,6 @@ class AssembleTest(unittest.TestCase):
         self.assertTrue(truth)
         #self.assertItemsEqual(result, expected)
         #self.assertItemsEqual(b_nodes[:5], [0,4,5,6,7])
-
 
 if __name__ == "__main__":
     unittest.main()
