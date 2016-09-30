@@ -1,0 +1,32 @@
+%%%%%%%% PARAMETERS %%%%%%%%%%
+
+force = sinsin
+mesh = HQsquare
+
+%%%%% AVAILABLE OPTIONS %%%%%%
+
+Change the rhs of the above equalities to change the parameters.
+The available parameters are:
+
+- force: the function of the right hand side of the heat equation
+- mesh: the triangulation of the domain on which the equation will be solved
+
+Currently, the available options for each parameter are:
+
+- force:
+    - sinsin: (2*pi^2)*sin(pi*x)*sin(pi*y)
+    - one: 1 (the constant function 1)
+
+- mesh:
+    - square: a square of side 1, ms=0.1 (286 elements)
+    - HQsquare: a square of side 1, ms=0.02 (6874 elements)
+    - l_sh: an L-shape (three squares, each of side 1, for the L-shape)
+    - half_circle: a half circle
+
+%%%%%%%%%% WARNING %%%%%%%%%%%
+
+The name of this file has to be "parameters.txt".
+
+This file has to be in the same folder as "assemble.py" and "main.py".
+
+The format of the "parameters lines" has to be: <parameter_name> = <option_name>

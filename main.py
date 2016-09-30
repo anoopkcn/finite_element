@@ -3,7 +3,7 @@ import numpy as np
 from mesh import *
 from basis_func import *
 from assemble import *
-
+from get_param import *
 from viewer import *
 
 def clear_rows(A,b_nodes):
@@ -28,7 +28,8 @@ def clear_rows(A,b_nodes):
 if __name__ == "__main__":
 
     # replace "square" by "HQSquare", "l_sh", "half_circle" for other shapes
-    topo , x , y , nodes , b_nodes = read_msh("mesh/square.msh")
+    mesh_name = str(get_mesh())
+    topo , x , y , nodes , b_nodes = read_msh("mesh/" + mesh_name + ".msh")
     A = gradu_gradv(topo,x,y)
     F = f_v(topo,x,y)
     F[b_nodes]=0
@@ -39,7 +40,7 @@ if __name__ == "__main__":
 	#Uncomment what follows to plot the difference between the difference between the
 	#approximation of actual solution, and the output of "finite elements"
     
-	#actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
-    #diff = sol - actual_sol
-    #plot_sol_p1(x,y,diff,topo)
+    actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
+    diff = sol - actual_sol
+    plot_sol_p1(x,y,diff,topo)
 

@@ -44,8 +44,14 @@ def gradu_gradv(topo,x,y):
 
 
 def force(x,y):
-    f = 2*(np.pi)**2 * np.sin(np.pi * x) * np.sin(np.pi * y)
-    #f = np.ones(len(x))    
+    force = str(get_force())
+    if force == "sinsin" :
+        f = 2*(np.pi)**2 * np.sin(np.pi * x) * np.sin(np.pi * y)
+    elif force == "one" :
+        f = np.ones(len(x))
+    else:
+        print(Invalid force name)
+        f = 0
     return f
 
 def f_v(topo,x,y):
@@ -62,10 +68,12 @@ def f_v(topo,x,y):
 
     Notice :
     """
+    F=np.zeros((x.shape[0]))
+
     for element in topo:
         x_l = x[element]
         y_l = y[element]
-
+		  
         surf_e = 1./2. *\
         abs(x_l[0]*y_l[2]-x_l[0]*y_l[1]+x_l[1]*y_l[0]-\
         x_l[1]*y_l[2]+x_l[2]*y_l[1]-x_l[2]*y_l[0] )
