@@ -27,7 +27,7 @@ def clear_rows(A,b_nodes):
 
 if __name__ == "__main__":
 
-    # topo , x , y , nodes , b_nodes = read_msh("mesh/square.msh")
+    # replace "square" by "HQSquare", "l_sh", "half_circle" for other shapes
     topo , x , y , nodes , b_nodes = read_msh("mesh/square.msh")
     A = gradu_gradv(topo,x,y)
     F = f_v(topo,x,y)
@@ -35,7 +35,11 @@ if __name__ == "__main__":
     A_clear = clear_rows(A,b_nodes)
     sol = np.linalg.solve(A_clear,F)
     plot_sol_p1(x,y,sol,topo)
-    #actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
+
+	#Uncomment what follows to plot the difference between the difference between the
+	#approximation of actual solution, and the output of "finite elements"
+    
+	#actual_sol = np.sin(np.pi * x) * np.sin(np.pi * y)
     #diff = sol - actual_sol
     #plot_sol_p1(x,y,diff,topo)
 
