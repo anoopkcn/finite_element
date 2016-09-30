@@ -15,7 +15,7 @@ One of the relatively easy problems to sole with FEM is the **Poisson's problem,
 ##Results
 
 Result 1
-![theory](images/solution_with_forcing.pngraw=true)
+![theory](images/solution_with_forcing.png?raw=true)
 
 
 Difference with the theoretical value
