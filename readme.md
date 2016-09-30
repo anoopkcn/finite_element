@@ -14,12 +14,14 @@ One of the relatively easy problems to sole with FEM is the **Poisson's problem,
 
 ##Results
 
-Result 1
+**Result 1 : Numerical solution**
 ![theory](images/solution_with_forcing.png?raw=true)
 
 
-Difference with the theoretical value
+**Result 2 : Difference with the theoretical value and the numerical solution**
 ![theory](images/difference_from_actual_solution.png?raw=true)
 
+
+**As one can see from the above plot the program is accurate up to the 4<sup>th</sup> decimal place.**
 
 
