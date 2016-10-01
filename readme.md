@@ -13,13 +13,13 @@ One of the relatively easy problems to sole with FEM is the **Poisson's problem,
 
 - The parameters one can use are(given in the file _parametes.txt_
 
-**PARAMETERS**
+PARAMETERS
 
 force = one
 
 mesh = square
 
-**AVAILABLE OPTIONS **
+AVAILABLE OPTIONS 
 
 Change the rhs of the above equalities to change the parameters.
 The available parameters are:
@@ -39,7 +39,7 @@ Currently, the available options for each parameter are:
     - l\_sh: an L-shape (three squares, each of side 1, for the L-shape)
     - half\_circle: a half circle
 
-** WARNING **
+WARNING 
 
 The name of this file has to be `parameters.txt`.
 
