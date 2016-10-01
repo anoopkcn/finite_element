@@ -12,9 +12,11 @@ One of the relatively easy problems to sole with FEM is the **Poisson's problem,
 -The `main.py` file takes an (n,n) matrix (where n is the number of nodes) which has in the LHS of the final linear system. With the help of a vector(`b_nodes` which specifying the boundary nodes it gives the matrix after applying the boundary conditions.
 
 - The parameters one can use are(given in the file _parametes.txt_
+
 **PARAMETERS**
 
 force = one
+
 mesh = square
 
 **AVAILABLE OPTIONS **
