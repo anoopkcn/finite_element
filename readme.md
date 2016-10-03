@@ -47,9 +47,10 @@ Currently, the available options for each parameter are:
 **Result 2 : Difference with the theoretical value and the numerical solution** (force = sinsin, mesh = HQsquare)
 ![theory](images/difference_from_actual_solution.png?raw=true)
 
+As one can see from the above plot the program is accurate up to the fourth decimal place.
+
 **Result 3: Numerical solution** (force = sinsin, mesh = half\_circle)
 ![theory](images/force_sinsin_mesh_half_circle.png?raw=true)
 
-As one can see from the above plot the program is accurate up to the fourth decimal place.
 
 
